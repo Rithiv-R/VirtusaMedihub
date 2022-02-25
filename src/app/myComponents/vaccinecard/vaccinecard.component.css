@@ -1,0 +1,59 @@
+.con1{
+    padding-top: 15px;
+    width: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+.card{
+    
+    position: relative;
+    box-shadow: 0 10px 30px #0000000d;
+    border-radius: 20px;
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+
+.card::after{
+    opacity: 1;
+}
+
+.card::before{
+    content: "";
+    background-image: url("./../../../assets/images/covid-banner.jpeg");
+    border-radius: 20px;
+    background-size: cover;
+    opacity: 0.6;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+ 
+.card p{ 
+    display: flex;
+    position: relative;
+    border-radius: 6px;
+    padding-top: 15px;
+    font-size: 40px;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card #button{
+    position: relative;
+    margin: auto;
+    padding: 10px;
+    font-size: large;
+    margin-left: 30px;
+    margin-right: 10px;
+    background-color: aquamarine;
+    border-radius: 10px;
+}

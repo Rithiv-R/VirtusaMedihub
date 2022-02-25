@@ -1,0 +1,25 @@
+<div class="slider">
+    <app-navbar class="navbar"></app-navbar>	
+	<div class="slider-item">
+		<img src="https://i.postimg.cc/Jn0X0pDS/1.jpg">
+		<div class="carousel-caption">
+			<h5>Appoitment Form</h5>
+			<p >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+		</div>
+	</div>
+</div>
+<div class="con2">
+    <h1>Patient Details for Appointment</h1>
+    <h6>Please Fill the appointment form given below with all required detials</h6>
+</div>
+<div class="con1">
+    <div class="col-md-4 g-0">
+        <div class="heading">
+            <p>Your selected Hospital and Doctor</p>
+        </div>
+           <app-application-docto-hospital [docname]="doctorname" [docover]="doctoroverview" [docimg]="doctorimage" [hosname]="hospname" [hosphoto]="hospphoto" [hosadd]="hospaddress" ></app-application-docto-hospital>
+    </div>
+    <div class="col-md-8 g-0">
+            <app-application-form></app-application-form>
+    </div>
+</div>

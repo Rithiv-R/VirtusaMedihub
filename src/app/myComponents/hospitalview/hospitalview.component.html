@@ -1,0 +1,14 @@
+<app-hospital-image [image]="selector.hosp_photo" ></app-hospital-image>
+<div>
+    <app-hospital-overview [details]="selector.hosp_details"></app-hospital-overview>
+    <app-hospital-location [url]="url"></app-hospital-location>
+    <app-hospital-contact [address]="selector.hosp_address" [phone]="selector.hosp_phone" [email]="selector.hosp_mail"></app-hospital-contact>
+    <p>Select doctors and book appointment, Click here</p>
+    <div class="btn">
+        <button><a (click)="myfunc(selector.hosp_name)">DOCTORS</a></button>
+    </div>
+</div>
+
+
+
+

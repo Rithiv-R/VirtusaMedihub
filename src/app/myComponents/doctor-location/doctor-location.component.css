@@ -1,0 +1,11 @@
+.frame{
+    text-align: center;
+}
+
+#words{
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 23px;
+    padding-left: 23px;
+    padding-top: 20px;
+}

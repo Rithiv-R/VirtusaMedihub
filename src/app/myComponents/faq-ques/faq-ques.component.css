@@ -1,0 +1,28 @@
+.con1{
+    font-size: medium;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    color: #000;
+}
+
+.quesfaq{
+    padding: 30px 30px;
+    background-color: rgba(0, 255, 255, 0.116);
+    border-radius: 30px;
+    width: 45%;
+    margin-top: 18px;
+}
+
+.quesfaq h5{
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.quesfaq p{
+    font-size: medium;
+    margin-left: 30px;
+    margin-top: 20px;
+}

@@ -1,0 +1,20 @@
+.card-text{
+    text-align: justify;
+}
+.btn{
+    padding: 0px 10px 10px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn button{
+    background-color: aquamarine;
+    padding: 10px 40px 10px 40px;
+    border-radius: 20px;
+    box-shadow: 3px 3px rgb(129, 129, 129);
+}
+
+p{
+    text-align: center;
+}

@@ -1,0 +1,46 @@
+.title{
+    text-align: center;
+}
+
+.faq{
+    margin-bottom: 30px;
+}
+
+.ques{
+	margin: 20px 0px;
+}
+
+.navbar{
+	height: 100px;
+}
+.slider-item {
+	height: 50%;
+	min-width: 100%;
+	margin-top: -18px;
+}
+
+.slider-item img{
+    opacity: 0.6;
+	width: 100%;
+    height: 400px;
+}
+
+.carousel-caption {
+    color: #000;
+	height: fit-content;
+	top: 0;
+	margin-top: 200px;
+}
+.carousel-caption h5 {
+	font-size: 45px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-family: merienda;
+}
+.carousel-caption p {
+	width: 60%;
+	margin: auto;
+	font-size: 18px;
+	line-height: 1.9;
+	font-family: poppins;
+}
