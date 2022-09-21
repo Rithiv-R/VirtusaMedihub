@@ -22,10 +22,7 @@ export class AuthService {
    async SignIn(email:string,password:string)
    {
        this.afAuth.signInWithEmailAndPassword(email,password).then((val)=>{
-        this.ngZone.run(()=>{
-          localStorage.setItem('userid',email);
           this.router.navigate([""]);
-        });
       })
       .catch((error)=>{
         window.alert(error.message);
@@ -36,41 +33,13 @@ export class AuthService {
    {
      this.afAuth.signOut().then(()=>{
       this.router.navigate(['']);
-     })  
+     });
    }
 
-   /*
-   async SignIn1(email:string,password:string)
-   {
-      this.afAuth.signInWithEmailAndPassword(email,password).then((val)=>{
-        this.ngZone.run(()=>{
-          localStorage.setItem('userid',email);
-          this.router.navigate(['']);
-        });
-      })
-      .catch((error)=>{
-        window.alert(error.message);
-      })
-   }
-
-   async SignUp(email:string,password:string,user:string,pid:string)
+   async SignUp(email:string,password:string,user:string)
    {
       this.afAuth.createUserWithEmailAndPassword(email,password).then(async (result)=>{   
-      this.SetUserData(result.user,user).then(()=>window.alert('User Account Registered Successfully!!'));
-      localStorage.setItem('userid',email);  
-      this.router.navigate(['productadd',pid]);
-     })
-     .catch((error)=>{
-       window.alert(error.message);
-     })
-   }
-
-   async SignUp1(email:string,password:string,user:string)
-   {
-      this.afAuth.createUserWithEmailAndPassword(email,password).then(async (result)=>{   
-      this.SetUserData(result.user,user).then(()=>window.alert('User Account Registered Successfully!!'));
-      localStorage.setItem('userid',email);  
-      this.router.navigate(['']);
+      this.SetUserData(result.user,user).then(()=>{window.alert('User Account Registered Successfully!!');this.router.navigate(['']);});
      })
      .catch((error)=>{
        window.alert(error.message);
@@ -86,12 +55,6 @@ export class AuthService {
       email: user.email,
       displayName: person,
     };
-    this.afs.collection('cart').doc(user).set({
-      uid:user,
-      mycart:[],
-      orderdelivery:[],
-      placed:0,
-    })
     return userRef.set(userData, {
       merge: true,
     });
@@ -105,16 +68,5 @@ export class AuthService {
       window.alert(error);
      });
    }
-
-   loggedid():string
-   {
-      const user = JSON.stringify(localStorage.getItem('userid')!);
-      if(user!=null)
-      {
-        return user;
-      }
-      return 'No User Found';
-   }
-   */
 
 }

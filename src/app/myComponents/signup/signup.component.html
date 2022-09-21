@@ -16,16 +16,16 @@
                       <hr>
                       <div class="row px-3"> <label class="mb-1">
                           <h6 class="mb-0 text-sm">Username</h6>
-                      </label> <input class="mb-4" type="text" name="username" placeholder="Enter a username"> </div>
+                      </label> <input class="mb-4" #username type="text" name="username" placeholder="Enter a username"> </div>
                   <div class="row px-3"> <label class="mb-1">
                           <h6 class="mb-0 text-sm">Email Address</h6>
-                      </label> <input class="mb-4" type="text" name="email" placeholder="Enter a valid email address"> </div>
+                      </label> <input class="mb-4" #email type="text" name="email" placeholder="Enter a valid email address"> </div>
                   <div class="row px-3"> <label class="mb-1">
                           <h6 class="mb-0 text-sm">Password</h6>
-                      </label> <input class= "abc" type="password" name="password" placeholder="Enter password"> </div>
+                      </label> <input class= "abc" #password type="password" name="password" placeholder="Enter password"> </div>
                       <div class="row px-3"> <label class="mb-1">
                           <h6 class="mb-0 text-sm">Re-type Password</h6>
-                      </label> <input class= "abc" type="password" name="password" placeholder="Enter password again"> </div>
+                      </label> <input class= "abc" #repassword type="password" name="password" placeholder="Enter password again"> </div>
                   <br>
                       <div class="row">
                       <div> <input id="chk1" type="checkbox" name="chk" class="custom-control-input" > 
@@ -33,8 +33,7 @@
                       <br>
                       
                   </div><br>
-                  <div class="row mb-3 px-3"> <button type="submit" class="btn btn-blue text-center" [routerLink]="['/signin']">Sign-up</button> </div>
-                  
+                  <div class="row mb-3 px-3"> <button type="submit" (click)="signup(username.value,email.value,password.value,repassword.value)" class="btn btn-blue text-center">Sign-up</button> </div>       
               </div>
           </div>
       </div>

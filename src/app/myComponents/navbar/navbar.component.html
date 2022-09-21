@@ -4,6 +4,7 @@
          <ul>
            <li><a href="#" routerLink="/home">HOME</a></li>
            <li *ngIf="islogged"><a href="#" routerLink="/hospital">HOSPITAL</a></li>
+           <li><a href="https://pharmify-b3dab.web.app/" >PHARMIFY</a></li>
            <li><a href="#" routerLink="/contact">CONTACT US</a></li>
            <li *ngIf="!islogged"><a href="#" routerLink="/signin">Log in</a></li>
            <li *ngIf="islogged">{{userCustomerId}}</li>

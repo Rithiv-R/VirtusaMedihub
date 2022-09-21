@@ -22,5 +22,8 @@ export class SigninComponent implements OnInit {
     this.service.SignIn(this.email,this.password);
   }
 
+  forgetpass():void{
+    this.service.ForgetPass(this.email);
+  }
 
 }
