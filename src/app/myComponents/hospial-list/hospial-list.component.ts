@@ -32,7 +32,6 @@ export class HospialListComponent implements OnInit {
     navigator.geolocation.getCurrentPosition((position)=>{
       this.x = position.coords.latitude;
       this.y = position.coords.longitude;
-      console.log(this.x,this.y);
     })
     this.services.readhospitals().subscribe((val)=>{
      var x1: Hospital[] = []
@@ -51,7 +50,7 @@ export class HospialListComponent implements OnInit {
        })
      })
     var y1: Hospital[] = []
-    var radius = 40*1000;
+    var radius = 500*1000;
     x1.forEach((element)=>{
      const distanceInKm = distanceBetween([element.hosp_latitude, element.hosp_longitude], [this.x,this.y]);
       const distanceInM = distanceInKm * 1000;

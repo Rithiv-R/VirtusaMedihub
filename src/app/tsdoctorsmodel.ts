@@ -3,6 +3,7 @@ import { patient_exp } from "./tspatientexpmodel";
 export class Doctor{
     doc_name!:String;
     doc_photo!:String;
+    doc_regno!:String;
     doc_overview!:String;
     hosp_name!:String;
     hosp_photo!:String;

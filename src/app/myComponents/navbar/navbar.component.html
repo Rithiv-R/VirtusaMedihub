@@ -3,9 +3,11 @@
          <label>MEDI-HUB</label>
          <ul>
            <li><a href="#" routerLink="/home">HOME</a></li>
-           <li><a href="#" routerLink="/hospital">HOSPITAL</a></li>
+           <li *ngIf="islogged"><a href="#" routerLink="/hospital">HOSPITAL</a></li>
            <li><a href="#" routerLink="/contact">CONTACT US</a></li>
-           <li><a href="#" routerLink="/signin">Log in</a></li>
+           <li *ngIf="!islogged"><a href="#" routerLink="/signin">Log in</a></li>
+           <li *ngIf="islogged">{{userCustomerId}}</li>
+           <li *ngIf="islogged"><a (click)="signout()">SignOut</a></li>
         </ul>
      </nav>
 </div>

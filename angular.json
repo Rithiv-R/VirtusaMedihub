@@ -102,6 +102,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "myApp:build:production",
+            "firebaseProject": "medhub-5488b",
+            "firebaseHostingSite": "medhub-5488b"
+          }
         }
       }
     }

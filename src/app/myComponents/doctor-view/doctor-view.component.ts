@@ -11,7 +11,8 @@ export class DoctorViewComponent implements OnInit {
 
   @Input() selector!:Doctor;
   @Input() myurl!:SafeUrl;
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

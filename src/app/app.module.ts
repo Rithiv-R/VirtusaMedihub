@@ -55,8 +55,14 @@ import { ClinicCardComponent } from './myComponents/clinic-card/clinic-card.comp
 import { ClinicDetailsComponent } from './myComponents/clinic-details/clinic-details.component';
 import {AngularFireModule} from '@angular/fire/compat';
 import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import {environment} from '../environments/environment'
 import { NgxPaginationModule } from 'ngx-pagination';
+import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService } from '@angular/fire/analytics';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -108,19 +114,26 @@ import { NgxPaginationModule } from 'ngx-pagination';
     ClinicHomeComponent,
     ClinicFormComponent,
     ClinicCardComponent,
-    ClinicDetailsComponent
+    ClinicDetailsComponent,
+   
   ],
   imports: [
+    provideAnalytics(() => getAnalytics()),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    AngularFireAuthModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
     RouterModule.forRoot([
       {path: 'home', component: HomesliderComponent},
       {path: 'faq', component: FaqComponent},
       {path: 'dieases', component: DiseasesHomeComponent},
       {path: 'hospital', component: HospialListComponent},
       {path: 'doctors/:name', component: DoctorListComponent},
-      {path: 'appointment/:docname/:docover/:docphoto/:hosname/:hosphoto/:hosadd', component: ApplicationComponent},
+      {path: 'appointment/:docname/:docover/:docphoto/:hosname/:hosphoto/:hosadd/:docreg', component: ApplicationComponent},
       {path: 'contact', component: ContactusHomeComponent},
       {path: 'aboutus', component: AboutusHomeComponent},
       {path: 'signin', component: SigninComponent},

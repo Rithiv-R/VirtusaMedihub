@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "medhub-5488b": {
+      "hosting": {
+        "myApp": [
+          "medhub-5488b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "medhub-5488b"
+  }
+}

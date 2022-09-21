@@ -4,6 +4,6 @@
 <app-doctor-location [url]="myurl"></app-doctor-location>
 <app-doctor-contact [address]="selector.hosp_address" [email]="selector.hosp_mail" [phone]="selector.hosp_phone"></app-doctor-contact>
 <div class="button">
-    <button [routerLink]="['/appointment',selector.doc_name,selector.doc_overview,selector.doc_photo,selector.hosp_name,selector.hosp_photo,selector.hosp_address]">Book an Appointment</button>
+    <button [routerLink]="['/appointment',selector.doc_name,selector.doc_overview,selector.doc_photo,selector.hosp_name,selector.hosp_photo,selector.hosp_address, selector.doc_regno]">Book an Appointment</button>
 </div>
 </div>
