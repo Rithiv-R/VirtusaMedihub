@@ -27,7 +27,7 @@ export class HUApplicationItemComponent implements OnInit {
   }
 
   decline():void{
-
+    this.service.decline(this.hospid,this.docreg,this.patientid,this.item.id);
   }
 
 }

@@ -88,7 +88,17 @@ export class ApplicationService {
     const s = now.getFullYear()+"-"+now.getDate()+"-"+now.getMonth();
     this.fs.collection("Appointments").doc(hospid).collection(docid).doc(patientid).collection(s).doc(id).update({
     "status":'1',
-    }).then(data=>{console.log('s');this.router.navigate(['hospitaluser',hospid,docid,patientid])});
+    }).then(data=>{this.router.navigate(['hospitaluser',hospid,docid,patientid])});
+   
+  }
+
+  decline(hospid:any,docid:any,patientid:any,id:any)
+  { 
+    const now = new Date(); 
+    const s = now.getFullYear()+"-"+now.getDate()+"-"+now.getMonth();
+    this.fs.collection("Appointments").doc(hospid).collection(docid).doc(patientid).collection(s).doc(id).update({
+    "status":'-1',
+    }).then(data=>{this.router.navigate(['hospitaluser',hospid,docid,patientid])});
    
   }
 
