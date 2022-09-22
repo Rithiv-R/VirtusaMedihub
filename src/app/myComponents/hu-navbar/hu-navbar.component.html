@@ -2,10 +2,11 @@
     <div class="logo">
       <div id="name">MEDI-HUB</div>
     </div>
-    <div class="menu-list">
-      <a href="#" [routerLink]="['hu-app-list',hospname,docreg,patientid]">Appointments</a>
-      <a href="#" [routerLink]="['hu-detail-form',hospname,docreg,patientid]">Details</a>
-      <a href="#" [routerLink]=" ['hu-contact-form',hospname,docreg,patientid]">Contact</a>
-      <a href="#" [routerLink]="['hu-profile',hospname,docreg,patientid]">profile</a>
+    <div *ngIf="islogged" class="menu-list">
+      <a href="#" [routerLink]="['hu-app-list',hospname,docreg,patientid]">APPOINTMENTS</a>
+      <a href="#" [routerLink]="['hu-detail-form',hospname,docreg,patientid]">DETAILS</a>
+      <a href="#" [routerLink]=" ['hu-contact-form',hospname,docreg,patientid]">CONTACT</a>
+      <a href="#" [routerLink]="['hu-profile',hospname,docreg,patientid]">PROFILE</a>
+      <a (click)="signout()">LOGOUT</a>
     </div>
   </div>

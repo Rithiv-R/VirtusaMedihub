@@ -12,9 +12,16 @@ import { Router } from '@angular/router';
 })
 export class HuauthService {
 
+
   constructor(public afs:AngularFirestore,
     public afAuth:AngularFireAuth,
     public router:Router,) { }
+
+    Signout(){
+      this.afAuth.signOut().then(()=>{
+        this.router.navigate(['hu-sign-in']);
+       });
+    }
 
     async SignIn(email:string,password:string)
     {
@@ -42,7 +49,10 @@ export class HuauthService {
          {
         window.alert('HOSPITAL ID DOESN\'T EXIT')
           }
-      });
-      
+      });  
     }
+
+
+
+
 }
