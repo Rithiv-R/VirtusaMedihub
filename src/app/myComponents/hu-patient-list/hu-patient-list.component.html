@@ -1,19 +1,14 @@
 <div class="con1">
+    <label id="name">MEDI-HUB</label>
     <div class="r1">
         <div class="heading">
-            SELECT THE PATIENT:
+            ....Select the Patient....
         </div>
     </div>
-    
-    <div class="r2">
-        <div *ngFor="let item of patientlist, let i = index" class="con2">
-           
-                <p>{{item.u_name}}</p>
-                <p>:         </p>
-                <a  [routerLink]="['/hospitaluser',hospid,docid,item.u_email]">
-                    <button class="profile">{{item.u_email}}</button> 
-                </a>
-               
+    <div class="con2">
+        <div class="card" *ngFor="let item of patientlist, let i = index" [routerLink]="['/hospitaluser',hospid,docid,item.u_email]">
+            <h2>{{item.u_name}}</h2>
+            <p>{{item.u_email}}</p>
         </div>
     </div>
 </div>

@@ -1,6 +1,16 @@
 .con1{
     background-color: azure;
+    padding-top: 30px;
 }
+#name{
+    cursor: default;
+    font-size: 48px;
+    font-weight: 500;
+    font-family: cooper;
+    margin-left: 50px;
+    color: rgb(0, 119, 255);
+    margin-top: 20px
+  }
 
 .r1 ,.r3, .con2, .r2{
     display: flex;
@@ -10,7 +20,6 @@
 }
 
 .r1{
-    padding-top: 30px;
     padding-bottom: 20px;
 }
 
@@ -18,18 +27,18 @@
 .r1 .heading{
     font-size: 36px;
     font-weight: 700;
-    padding: 30px 10px;
+    padding-bottom: 50px;
 }
 
 .image img{
-    width: 100%;
+    width: 200px;
     align-self: center;
     border-radius: 15px;
     
 }
 
 .card{
-    max-width: 200px;
+    width: 250px;
     border-radius: 15px;
     border: none;
     background: transparent;
@@ -41,13 +50,13 @@
 }
 
 .name{
-    font-size: 18px;
+    font-size: 22px;
     text-align: center;
     max-width: 150px;
 }
 
 .r3{
-    padding: 40px 0px;
+    padding: 60px 0px;
 }
 
 .profile button{

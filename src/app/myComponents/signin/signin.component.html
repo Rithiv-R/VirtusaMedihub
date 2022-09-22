@@ -1,52 +1,37 @@
 <app-navbar></app-navbar>
-<br>
-<div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
-  <div class="card card0 border-0">
-      <div class="row d-flex">
-          <div class="col-lg-6">
-              <div class="card1 pb-5">
-                <div class="row"> <br><br> </div>
-                  <div class="row px-3 justify-content-center mt-4 mb-5 border-line"> <img src="https://image.freepik.com/free-vector/forgot-password-concept-illustration_114360-1123.jpg" class="image"> </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="card2 card border-0 px-4 py-5">
-                    <div class="row">
-                      <h6 class="mb-0 mr-4 mt-2"><p><b>LOGIN</b></p></h6>
-                      <hr><br><br>
-                    <div class="row px-3"> 
-                        <label class="mb-1">
-                          <h6 class="mb-0 text-sm">Email Address</h6>
-                        </label> 
-                        <input class="abc" type="text" [(ngModel)]="email" name="email" placeholder="Enter a valid email address"> 
-                    </div>
-                    <div class="row px-3"> 
-                        <label class="mb-1">
-                          <h6 class="mb-0 text-sm">Password</h6>
-                        </label> 
-                        <input class= "abc" type="password"  [(ngModel)]="password" name="password" placeholder="Enter password"> 
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div> 
-                            <input id="chk1" type="checkbox" name="chk" class="custom-control-input" > 
-                            <label for="chk1" class="custom-control-label text-sm">Remember me</label> 
-                        </div> 
-                        <br>
-                       <div (click)="forgetpass()">
-                          Forget Password
-                       </div>
-                    </div>
-                    <div class="row mb-3 px-3"> 
-                      <button type="submit"(click)="login()" class="btn btn-blue text-center">Login</button> 
-                    </div>
-                    <div class="row "> 
-                        <small class="font-weight-bold">Don't have an account? 
-                            <a class="text-danger" routerLink="/signup">Register</a>
-                        </small>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+<div class="con1">
+  <div class="box1">
+    <div class="img1">
+      <img src="./../../../assets/images/login-img.svg" width="300px">
     </div>
+    <div class="box">
+      <div class="head">Sign-In</div>
+      <hr size="5px">
+      <div class="content">
+        <form>
+          <div class="input1">
+            <label>EMAIL:</label><br>
+            <input #email type="email">
+          </div>
+          <div class="input1">
+            <label>Password:</label><br>
+            <input #password type="password">
+          </div>
+          <div class="forgot">
+            <a (click)="forgetpass(email.value)">Forgot Password</a>
+          </div>
+          <div class="button1">
+            <button type="submit" (click)="login(email.value,password.value)">Login</button>
+          </div>
+        </form>
+        <div class="link">
+          Dont have an account<br><a href="#" routerLink="/signup">Register here</a>
+        </div>
+      </div>
+    </div>
+    <div class="img1">
+      <img src="./../../../assets/images/login.jpg" width="300px">
+    </div>
+  </div>
 </div>

@@ -20,15 +20,14 @@
 }
 
 .slider-item img{
-    opacity: 0.6;
 	width: 100%;
-    height: 400px;
+    height: 500px;
 }
 
 .carousel-caption {
     color: #000;
 	height: fit-content;
-	top: 0;
+	top: 70px;
 	margin-top: 200px;
 }
 .carousel-caption h5 {

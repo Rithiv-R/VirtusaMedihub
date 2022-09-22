@@ -9,21 +9,19 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class SigninComponent implements OnInit {
 
-  email:string="";
-  password:string = "";
 
   constructor(public service:AuthService,private route:ActivatedRoute) {}
 
   ngOnInit(): void {
   }
 
-  login():void
+  login(email:string,password:string):void
   {
-    this.service.SignIn(this.email,this.password);
+    this.service.SignIn(email,password);
   }
 
-  forgetpass():void{
-    this.service.ForgetPass(this.email);
+  forgetpass(email:string):void{
+    this.service.ForgetPass(email);
   }
 
 }

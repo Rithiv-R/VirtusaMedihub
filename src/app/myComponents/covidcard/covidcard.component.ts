@@ -8,8 +8,10 @@ import { guidlines } from 'src/app/class';
 })
 export class CovidcardComponent implements OnInit {
 
-  @Input()
-  d: guidlines = new guidlines;
+  @Input() title: any;
+  @Input() img: any;
+  @Input() desc:any;
+
 
   constructor() { 
     

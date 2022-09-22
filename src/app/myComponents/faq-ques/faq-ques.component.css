@@ -1,28 +1,187 @@
 .con1{
-    font-size: medium;
+    background-color: azure;
+    padding: 10px;
+    background-image: url("https://media.istockphoto.com/vectors/disinfection-seamless-pattern-vector-background-included-line-icons-vector-id1219894252?s=612x612");
+    background-repeat: repeat;
+  }
+  .cat1{
+    padding: 10px;
+    margin: 20px 200px;
+    background-color: azure;
+    border-radius: 10px;
+  }
+  .cat2{
+   padding-top: 1px;
+   padding-right: 1px;
+    margin: 20px 200px;
+    background-color: azure;
+    border-radius: 10px;
+  }
+  .cat3{
+    padding: 10px;
+    margin: 20px 200px;
+    background-color: azure;
+    border-radius: 10px;
+  }
+  .cat4{
+    padding: 10px;
+    margin: 20px 200px;
+    background-color: azure;
+    border-radius: 10px;
+  }
+  .path{
+      padding: 10px;
+      margin-top: 7px;
+      margin-left: 80px;
+      font-size: 12px;
+  }
+  img{
+    height: 200px;
+    width:200px;
+    border-width: 10px;
+    
+  }
+  .img1{
+    float: left;
+    margin-left: 50px;
+    padding:25px;
+  }
+  .img2{
+    float:right;
+    margin-right: 5px;
+    
+    padding: 25px;
+  }
+  .img3{
+    float: left;
+    margin-left: 100px;
+    padding-right:25px;
+    margin-top: -50px;
+  }
+  .img4{
+    float:left;
+    margin-left: 50px;
+    padding: 25px;
+  }
+  h2{
+      font-size: 33px;
+      margin-left: 35px;
+      font-family: 'Artifika', serif;
+  }
+  .accordion {
+      box-shadow: 0 0 10px rgb(150, 106, 106);
+      border-radius: 20px;
+      overflow: hidden;
+      font-family: "Quicksand", sans-serif;
+      background-color: rgba(127, 255, 244, 0.5);
+      font-family: "Poppins",sans-serif;
+      margin: 20px;
+    }
+    
+    .accordion__label,
+    .accordion__content {
+      padding: 14px 20px;
+    }
+    
+    .accordion__label {
+      display: block;
+      color: #070000;
+      font-weight: 500;
+      cursor: pointer;
+      position: relative;
+      transition: background 0.1s;
+      font-family: "Poppins",sans-serif;
+    }
+    
+    .accordion__label:hover {
+      background: rgba(0, 0, 0, 0.1);
+    }
+    
+    .accordion__label::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
+      width: 12px;
+      height: 6px;
+      background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
+      background-size: contain;
+      transition: transform 1.3s;
+    }
+    
+    .accordion__content {
+      background: azure;
+      line-height: 1.6;
+      font-size: 0.85em;
+      display: none;
+    }
+    
+    .accordion__input {
+      display: none;
+    }
+    
+    .accordion__input:checked ~ .accordion__content {
+      display: block;
+    }
+    
+    .accordion__input:checked ~ .accordion__label::after {
+      transform: translateY(-50%) rotate(0.5turn);
+    }
+    .service .title h5, h3{
+      font-family: 'Artifika', serif;
+      font-weight: 500;
+    }
+    .service .title h5{
+      font-size: 15px;
+    }
+    
+    .service .title h3{
+      font-size: 30px;
+    }
+    h2[_ngcontent-yrf-c304] {
+      margin-left: 40px;
+      font-size: 60px;
+      font-weight:900;
+      color: #4f585e;
+      font-family: 'Artifika', serif;
+  }
+
+  /*
+  rgba(127, 255, 244, 0.2)
+
+  rgb(127, 227, 255);
+  */
+  .sub{
+    max-height: max-content;
+    background-color: rgba(55, 55, 255, 0.6);
+    box-shadow: 0 10px 30px #0000000d;
+    border-radius:10px;
+    margin: 20px 400px;
     display: flex;
-    flex-direction: row;
-    flex: 1;
-    justify-content: space-evenly;
+    flex-direction:column;
     flex-wrap: wrap;
-    color: #000;
-}
-
-.quesfaq{
-    padding: 30px 30px;
-    background-color: rgba(0, 255, 255, 0.116);
-    border-radius: 30px;
-    width: 45%;
-    margin-top: 18px;
-}
-
-.quesfaq h5{
-    font-weight: 700;
-    font-size: 24px;
-}
-
-.quesfaq p{
-    font-size: medium;
-    margin-left: 30px;
-    margin-top: 20px;
-}
+    min-width: 60%;
+  }
+  .sub p{
+    font-size: 15px;
+    font-weight: 600px;
+    padding: 2px;
+    margin-left: 10px;
+    margin-top: 5px;
+    padding-bottom: 20px;
+    margin-bottom: -10px;
+  }
+  h3{
+    font-size: 25px;
+    font-weight: 600px;
+    padding: 5px;
+    margin-left: 20px;
+    font-family: 'Artifika', serif;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    margin-bottom: -10px;
+  }
+  #right{
+    margin-left: 600px;
+  }

@@ -1,39 +1,42 @@
 <app-navbar></app-navbar>
-<br>
-<div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
-  <div class="card card0 border-0">
-      <div class="row d-flex">
-          <div class="col-lg-6">
-              <div class="card1 pb-5">
-                  <div class="row"> <br><br><br> </div>
-                  <div class="row px-3 justify-content-center mt-4 mb-5 border-line"> <img src="https://image.freepik.com/free-vector/sign-concept-illustration_114360-5425.jpg" class="image"> </div>
-              </div>
-          </div>
-          <div class="col-lg-6">
-              <div class="card2 card border-0 px-4 py-5">
-                  <div class="row">
-                      <h6 class="mb-0 mr-4 mt-2"><p><b><br>Create Account<br></b></p></h6>
-                      <hr>
-                      <div class="row px-3"> <label class="mb-1">
-                          <h6 class="mb-0 text-sm">Username</h6>
-                      </label> <input class="mb-4" #username type="text" name="username" placeholder="Enter a username"> </div>
-                  <div class="row px-3"> <label class="mb-1">
-                          <h6 class="mb-0 text-sm">Email Address</h6>
-                      </label> <input class="mb-4" #email type="text" name="email" placeholder="Enter a valid email address"> </div>
-                  <div class="row px-3"> <label class="mb-1">
-                          <h6 class="mb-0 text-sm">Password</h6>
-                      </label> <input class= "abc" #password type="password" name="password" placeholder="Enter password"> </div>
-                      <div class="row px-3"> <label class="mb-1">
-                          <h6 class="mb-0 text-sm">Re-type Password</h6>
-                      </label> <input class= "abc" #repassword type="password" name="password" placeholder="Enter password again"> </div>
-                  <br>
-                      <div class="row">
-                      <div> <input id="chk1" type="checkbox" name="chk" class="custom-control-input" > 
-                        <label for="chk1" class="custom-control-label text-sm">Remember me</label> </div> <br>
-                      <br>
-                      
-                  </div><br>
-                  <div class="row mb-3 px-3"> <button type="submit" (click)="signup(username.value,email.value,password.value,repassword.value)" class="btn btn-blue text-center">Sign-up</button> </div>       
-              </div>
-          </div>
+
+<div class="con1">
+  <div class="box1">
+    <div class="img1">
+      <img src="./../../../assets/images/login-img.svg" width="300px">
+    </div>
+    <div class="box">
+      <div class="head">Sign-Up</div>
+      <hr size="5px">
+      <div class="content">
+        <form>
+            <div class="input1">
+                <label>Username:</label><br>
+                <input #username type="text">
+            </div>
+            <div class="input1">
+                <label>Email:</label><br>
+                <input #email type="text">
+            </div>
+            <div class="input1">
+                <label>Password:</label><br>
+                <input #password type="password">
+            </div>
+            <div class="input1">
+                <label>Re-Password:</label><br>
+                <input #repassword type="password">
+            </div>
+            <div class="button1">
+                <button type="submit" (click)="signup(username.value,email.value,password.value,repassword.value)">Sign up</button>
+            </div>
+            <div class="link">
+                Already have an account!<br><a href="#" routerLink="/signin">Sign In</a>
+            </div>
+        </form>
       </div>
+    </div>
+    <div class="img1">
+        <img src="./../../../assets/images/login.jpg" width="300px">
+    </div>
+  </div>
+</div>
