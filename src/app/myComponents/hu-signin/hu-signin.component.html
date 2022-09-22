@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+
+<div class="con1">
+  <div class="box1">
+    <div class="img1">
+      <img src="https://github.com/Asquare-B/angularWebnew/blob/main/src/assets/images/login.jpg" width="300px">
+    </div>
+    <div class="box">
+      <div class="head">Login</div>
+      <hr size="5px">
+      <div class="content">
+        <form>
+          <div class="input1">
+            <label>Username</label><br>
+            <input #name type="text">
+          </div>
+          <div class="input1">
+            <label>Password</label><br>
+            <input #password type="password">
+          </div>
+          <div class="button1">
+            <button (click)="signin(name.value,password.value)">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="img1">
+      <img src="https://raw.githubusercontent.com/Asquare-B/angularWebnew/5bd56748f349da5ed99dfd13c1d40593b3673022/src/assets/images/login-img.svg" width="300px">
+    </div>
+  </div>
+</div>
+
+<app-footer class="footer"></app-footer>

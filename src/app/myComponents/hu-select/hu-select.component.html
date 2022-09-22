@@ -1,0 +1,25 @@
+<div class="con1">
+    <div class="r1">
+        <div class="heading">
+            ....Select the Doctor....
+        </div>
+    </div>
+    
+    <div class="r2">
+        <div *ngFor="let item of doctolist, let i = index" class="con2">
+            <div class="card" [routerLink]="['/hu-patient',hospid,item.doc_regno]">
+                <div class="image">
+                    <img [src]="item.doc_photo">
+                </div>
+                <div class="name">
+                    {{item.doc_name}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="r3">
+        <div class="profile">
+            <button>Manage Doctors Profiles</button>
+        </div>
+    </div>
+</div>

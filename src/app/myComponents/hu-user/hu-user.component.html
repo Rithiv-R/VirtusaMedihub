@@ -1,0 +1,6 @@
+<app-hu-navbar [docreg]="doctorregno" [hospname]="hospid" [patientid]="patientid"></app-hu-navbar>
+<div class="con1">
+    <div class="col-md-9">
+        <router-outlet (activate)="onActivate()"></router-outlet>
+    </div>
+</div>

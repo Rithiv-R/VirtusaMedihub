@@ -1,0 +1,19 @@
+<div class="con1">
+    <div class="r1">
+        <div class="heading">
+            SELECT THE PATIENT:
+        </div>
+    </div>
+    
+    <div class="r2">
+        <div *ngFor="let item of patientlist, let i = index" class="con2">
+           
+                <p>{{item.u_name}}</p>
+                <p>:         </p>
+                <a  [routerLink]="['/hospitaluser',hospid,docid,item.u_email]">
+                    <button class="profile">{{item.u_email}}</button> 
+                </a>
+               
+        </div>
+    </div>
+</div>

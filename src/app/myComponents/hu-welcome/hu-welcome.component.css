@@ -1,0 +1,61 @@
+.con1{
+    background-color: azure;
+}
+
+.r1 ,.r3, .con2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.r1{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+
+.r1 .heading{
+    font-size: 36px;
+    font-weight: 700;
+    padding: 30px 10px;
+}
+
+.image img{
+    width: 100%;
+    align-self: center;
+    border-radius: 15px;
+    
+}
+
+.card{
+    max-width: 200px;
+    border-radius: 15px;
+    border: none;
+    background: transparent;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 0px 15px;
+}
+
+.name{
+    font-size: 18px;
+    text-align: center;
+    max-width: 150px;
+}
+
+.r3{
+    padding: 40px 0px;
+}
+
+.profile button{
+    background: transparent;
+    border: 2px solid;
+    padding: 10px 70px;
+    font-size: 20px;
+    border-radius: 20px;
+    
+
+}

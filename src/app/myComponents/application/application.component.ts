@@ -15,6 +15,8 @@ export class ApplicationComponent implements OnInit {
   hospphoto:any;
   hospaddress:any;
   docreg:any;
+
+ 
   constructor(public route:ActivatedRoute) {
     this.doctorname = this.route.snapshot.params['docname'];
     this.doctoroverview  = this.route.snapshot.params['docover'];

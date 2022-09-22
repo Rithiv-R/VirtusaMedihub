@@ -1,7 +1,7 @@
 import { MaybeForwardRefExpression, SelectorContext } from '@angular/compiler';
 import { Component, Input, OnInit ,} from '@angular/core';
 import { SafeUrl } from '@angular/platform-browser';
-import { NavigationExtras, Router, RouterOutlet } from '@angular/router';
+import { NavigationExtras, Router, RouterOutlet} from '@angular/router';
 import { Hospital } from 'src/app/tsmodel';
 
 
@@ -16,6 +16,7 @@ export class HospitalviewComponent implements OnInit{
   @Input() url!:SafeUrl;
   
   constructor(public router:Router) { 
+    
   }
 
   ngOnInit(): void {

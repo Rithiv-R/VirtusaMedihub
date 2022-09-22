@@ -35,7 +35,7 @@ export class DoctorserviceService {
               hosp_phone:hosp_phone,
               hosp_photo:hosp_photo,
           };
-          temp.push(temp2)
+          temp.push(temp2);
         })
       });
     })

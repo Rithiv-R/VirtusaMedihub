@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {AngularFirestore,AngularFirestoreCollection} from '@angular/fire/compat/firestore';
+import { SIGUSR2 } from 'constants';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,11 @@ export class AppointmentserviceService {
     const now = new Date(); 
     const mission = now.getHours()+"."+now.getMinutes()+"."+now.getSeconds();
     const s = now.getFullYear()+"-"+now.getDate()+"-"+now.getMonth();
-    this.fs.collection('Appointments').doc(hospname).collection(docreg).doc(useremail).collection(s.toString()).doc(mission.toString()).set(
+    var s1= this.fs.collection('Appointments').doc(hospname)
+    s1.set({name:hospname});
+    var s2 = s1.collection(docreg).doc(useremail)
+    s2.set({name:email})
+    s2.collection(s.toString()).doc(mission.toString()).set(
       {
         name:name,
         email:email,
@@ -22,8 +27,8 @@ export class AppointmentserviceService {
         address:address,
         phone:phone,
         date:date,
-        starttime:starttime,
-        endtime:endtime,
+        startime:starttime.toString(),
+        endtime:endtime.toString(),
         reason:reason,
         id:mission.toString(),
       }
