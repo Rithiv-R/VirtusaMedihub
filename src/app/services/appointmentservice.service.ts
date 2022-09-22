@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import {AngularFirestore,AngularFirestoreCollection} from '@angular/fire/compat/firestore';
-import { SIGUSR2 } from 'constants';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -32,7 +30,8 @@ export class AppointmentserviceService {
         reason:reason,
         id:mission.toString(),
         status:0,
+        collectionid:s.toString(),
       }
-    ).then(()=>console.log('Successfully Added'));
+    ).then(()=>window.alert('Appointment Successfully Added!!'));
   }
 }

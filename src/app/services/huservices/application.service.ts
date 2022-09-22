@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore'; 
 import { Console } from 'console';
 import { EmailAuthCredential } from 'firebase/auth';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class ApplicationService {
   denied!:any[];
   pending!:any [];
     
-  constructor(public fs:AngularFirestore) {
+  constructor(public fs:AngularFirestore,public router:Router) {
   }
 
   sort(hospid:string,docid:string,patientid:string)
@@ -38,6 +39,7 @@ export class ApplicationService {
           phone:data.get('phone'),
           reason:data.get('reason'),
           startime: data.get('startime'),
+          collectionid:data.get('collectionid'),
         }
         this.pending.push(temp1)
       }
@@ -54,6 +56,7 @@ export class ApplicationService {
           phone:data.get('phone'),
           reason:data.get('reason'),
           startime: data.get('startime'),
+          collectionid:data.get('collectionid'),
         }
         this.accepted.push(temp1)
       }
@@ -70,6 +73,7 @@ export class ApplicationService {
           phone:data.get('phone'),
           reason:data.get('reason'),
           startime: data.get('startime'),
+          collectionid:data.get('collectionid'),
         }
         this.denied.push(temp1)
       }
@@ -77,4 +81,15 @@ export class ApplicationService {
     }));
     return [this.accepted,this.denied,this.pending];
   }
+
+  accept(hospid:any,docid:any,patientid:any,id:any)
+  { 
+    const now = new Date(); 
+    const s = now.getFullYear()+"-"+now.getDate()+"-"+now.getMonth();
+    this.fs.collection("Appointments").doc(hospid).collection(docid).doc(patientid).collection(s).doc(id).update({
+    "status":'1',
+    }).then(data=>{console.log('s');this.router.navigate(['hospitaluser',hospid,docid,patientid])});
+   
+  }
+
 }
