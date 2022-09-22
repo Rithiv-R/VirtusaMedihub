@@ -17,8 +17,8 @@ export class AppointmentserviceService {
     const s = now.getFullYear()+"-"+now.getDate()+"-"+now.getMonth();
     var s1= this.fs.collection('Appointments').doc(hospname)
     s1.set({name:hospname});
-    var s2 = s1.collection(docreg).doc(useremail)
-    s2.set({name:email})
+    var s2 = s1.collection(docreg).doc(useremail);
+    s2.set({name:useremail});
     s2.collection(s.toString()).doc(mission.toString()).set(
       {
         name:name,
@@ -31,6 +31,7 @@ export class AppointmentserviceService {
         endtime:endtime.toString(),
         reason:reason,
         id:mission.toString(),
+        status:0,
       }
     ).then(()=>console.log('Successfully Added'));
   }

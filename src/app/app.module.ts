@@ -86,7 +86,7 @@ import { HuPharmifyFormComponent } from './myComponents/hu-pharmify-form/hu-phar
 
 
 
-
+import { CommonModule } from '@angular/common';
 import {MatTabsModule} from '@angular/material/tabs'; 
 import {MatDialogModule} from '@angular/material/dialog';
 
@@ -220,6 +220,7 @@ import { HuSigninComponent } from './myComponents/hu-signin/hu-signin.component'
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     BrowserModule,
+    CommonModule,
     MatAutocompleteModule,
     MatCheckboxModule,
     MatDatepickerModule,
