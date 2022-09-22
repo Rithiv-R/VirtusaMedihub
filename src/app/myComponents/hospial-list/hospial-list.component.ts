@@ -50,7 +50,7 @@ export class HospialListComponent implements OnInit {
        })
      })
     var y1: Hospital[] = []
-    var radius = 500*1000;
+    var radius = 30*1000;
     x1.forEach((element)=>{
      const distanceInKm = distanceBetween([element.hosp_latitude, element.hosp_longitude], [this.x,this.y]);
       const distanceInM = distanceInKm * 1000;
@@ -59,8 +59,8 @@ export class HospialListComponent implements OnInit {
       }
     })
     this.listHospital=y1
+    this.len = this.listHospital.length;
     })
-    this.services.readhospitals().subscribe((val)=>{this.len=val.length});  
   }
 
   onclick(val:Hospital,ind:number)

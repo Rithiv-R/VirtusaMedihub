@@ -49,10 +49,6 @@ export class DoctorListComponent implements OnInit {
   {  
     alert('REQUEST SENT SUCCESSFULLY');
   }  
-  
-  add()
-  {
-    this.service.addhosp()
-  }
+
 
 }

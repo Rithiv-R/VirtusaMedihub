@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserhospService } from 'src/app/services/userhosp.service';
 
 @Component({
   selector: 'app-hu-application-item-ac',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HuApplicationItemAcComponent implements OnInit {
 
-  constructor() { }
+  constructor(public service:UserhospService) { }
 
   ngOnInit(): void {
+  }
+
+  add()
+  {
+    this.service.addhosp();
   }
 
 }
