@@ -1,0 +1,35 @@
+<div class="slider">
+    <app-navbar class="navbar"></app-navbar>	
+	<div class="slider-item">
+		<img src="./../../../assets/images/home.jpg">
+		<div class="carousel-caption">
+			<h5>Appointment Status</h5>
+			<p>Check status of your booked appointments</p>
+		</div>
+	</div>
+</div>
+<div class="r1">
+    <div class="heading">
+        ....Your Appointment List...
+    </div>
+</div>
+<div class="con">
+    <div class="con1" *ngFor="let item of status">
+        <div class="card" >
+            <div class="col">
+                <p>Name : {{item.name}}<br>
+                Phone : {{item.phone}}<br>
+                Email : {{item.email}}<br>
+                Reason : {{item.reason}}<br>
+                Status : {{item.status}}</p>
+               
+            </div>
+            <div class="col">
+                <p>Date : {{item.date}}</p>
+                <p>Start : {{item.startime}}</p>
+                <p>End : {{item.endtime}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+

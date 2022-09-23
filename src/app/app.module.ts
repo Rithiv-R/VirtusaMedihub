@@ -138,6 +138,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HuSigninComponent } from './myComponents/hu-signin/hu-signin.component';
+import { ApplicationStatusComponent } from './myComponents/application-status/application-status.component';
 
 @NgModule({
   declarations: [
@@ -212,6 +213,7 @@ import { HuSigninComponent } from './myComponents/hu-signin/hu-signin.component'
     HuPatientCardComponent,
     HuPharmifyFormComponent,
     HuSigninComponent,
+    ApplicationStatusComponent,
    
   ],
   
@@ -267,6 +269,7 @@ import { HuSigninComponent } from './myComponents/hu-signin/hu-signin.component'
       {path: 'dieases', component: DiseasesHomeComponent},
       {path: 'hospital', component: HospialListComponent},
       {path: 'doctors/:name', component: DoctorListComponent},
+      {path:'status',component:ApplicationStatusComponent},
       {path: 'appointment/:docname/:docover/:docphoto/:hosname/:hosphoto/:hosadd/:docreg', component: ApplicationComponent},
       {path: 'contact', component: ContactusHomeComponent},
       {path: 'aboutus', component: AboutusHomeComponent},

@@ -39,6 +39,7 @@ font-family: poppins;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin-bottom: 100px;
 }
 
 .con2{

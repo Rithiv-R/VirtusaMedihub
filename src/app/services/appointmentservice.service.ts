@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import {AngularFirestore,AngularFirestoreCollection} from '@angular/fire/compat/firestore';
+import { documentId } from '@angular/fire/firestore';
+import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
 export class AppointmentserviceService {
 
-  constructor(private fs:AngularFirestore) {
+  constructor(private fs:AngularFirestore,public router:Router) {
   }
 
   addappointment(name:string,email:string,attendees:Number,address:string,phone:Number,date:Date,starttime:string,endtime:string,reason:string,docreg:string,hospname:string,useremail:string)
@@ -21,17 +23,30 @@ export class AppointmentserviceService {
       {
         name:name,
         email:email,
-        attendees:attendees,
+        attendees:attendees.toString(),
         address:address,
-        phone:phone,
+        phone:phone.toString(),
         date:date,
         startime:starttime.toString(),
         endtime:endtime.toString(),
         reason:reason,
         id:mission.toString(),
-        status:0,
+        status:"0",
         collectionid:s.toString(),
       }
-    ).then(()=>window.alert('Appointment Successfully Added!!'));
+    ).then(()=>{
+    var ref = this.fs.collection("Requests").doc(useremail);
+    ref.set({
+      useremail:useremail,
+    })
+    ref.collection('sent').add({
+      hospid:hospname,
+      docid:docreg,
+      patientid:useremail,
+      collectionid:s.toString(),
+      documentid:mission.toString(),
+    }).then(()=>{window.alert('Appointment Successfully Added!!'); this.router.navigate([""]);});
+    }
+    )
   }
 }

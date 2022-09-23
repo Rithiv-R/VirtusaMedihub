@@ -47,7 +47,7 @@ export class ApplicationService {
       {
         var temp1 = {
           address : data.get('address'),
-          attendees: data.get('attendees'),
+          attendees: data.get('attendees').toString(),
           date : data.get('date'),
           email: data.get('email'),
           endtime: data.get('endtime'),
@@ -101,5 +101,6 @@ export class ApplicationService {
     }).then(data=>{this.router.navigate(['hospitaluser',hospid,docid,patientid])});
    
   }
+
 
 }

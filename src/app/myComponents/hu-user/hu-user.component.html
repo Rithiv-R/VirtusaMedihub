@@ -1,5 +1,18 @@
 <app-hu-navbar [docreg]="doctorregno" [hospname]="hospid" [patientid]="patientid"></app-hu-navbar>
 <div class="con1">
+    <div *ngFor="let item of temp1" class="card">
+        <app-application-hos [hosadd]="item.hosadd" [hosname]="item.hosname" [hosphoto]="item.hosimage"></app-application-hos>
+    </div>
+    <div *ngFor="let item of temp" class="card">
+        <app-application-doc [docimg]="item.docimage" [docname]="item.docname" [docover]="item.docoverview"></app-application-doc>
+    </div>
+    <div class="card1" *ngFor="let item of temp2">
+        <h4>{{item.u_name}}</h4>
+        <p>{{item.u_email}}</p>
+    </div>
+</div>
+
+<div class="con1">
     <div class="col-md-9">
         <router-outlet (activate)="onActivate()"></router-outlet>
     </div>

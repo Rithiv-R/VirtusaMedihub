@@ -1,5 +1,5 @@
 .con1{
-    width: 75%;
+    width: 90%;
     padding-top: 20px;
 }
 .card{
@@ -22,17 +22,22 @@
 .col1{
     margin-left: 10px;
     width: 25%;
+    font-weight: 700;
     text-align: end;
 }
 .con1 #btn1{
-    background-color: rgba(0, 255, 0, 0.5);
-    width: 100%;
+    background-color: rgba(0, 255, 0, 0.35);
+    font-weight: 800;
+    font-size: 20px;
+    width: 50%;
     height: 50%;
     border-radius: 0px 15px 0px 0px;
 }
 .con1 #btn2{
-    background-color: rgb(255, 0, 0, 0.8);
-    width: 100%;
+    background-color: rgb(255, 0, 0, 0.35);
+    width: 50%;
+    font-weight: 800;
+    font-size: 20px;
     height: 50%;
     border-radius: 0px 0px 15px 0px;
 }

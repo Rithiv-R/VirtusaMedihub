@@ -14,48 +14,13 @@
                 <app-doctor-item [List_item]="list"></app-doctor-item>
             </div>
     </div>
-    <div class="col-md-6 g-0">
+    <div class="col-md-6 g-0 sideimg">
             <div *ngIf="value">
                 <app-doctor-view [selector]="selected" [myurl]="urlSafe"></app-doctor-view>
             </div>
-            <div>
-                <div *ngIf="!value">
-                    <div class="container"><div class=" text-center mt-5 ">
-                        <h1>SUGGESSTION FORM</h1>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-10 mx-auto">
-                            <div class="card mx-auto bg-light">
-                                <div class="card-body bg-light">
-                                    <div class="container">
-                                        <form id="contact-form" role="form">
-                                            <div class="controls">
-                                                <div class="row" style="padding: 20px;">
-                                                    <div class="col-md-8">
-                                                        <div class="form-group"> <label for="form_name">Firstname *</label>
-                                                        <input id="form_name" [(ngModel)]="formholder" type="text" name="name" class="form-control" placeholder="NAME*" required="required" data-error="Firstname is required."> </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row" style="padding: 20px;">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group"> <label for="form_email">Email *</label> <input id="form_email" [(ngModel)]="formemail" type="email" name="email" class="form-control" placeholder="EMAIL*" required="required" data-error="Valid email is required."> </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row" style="padding: 20px;">
-                                                    <div class="col-md-12">
-                                                        <div class="form-group"> <label for="form_message">Message *</label> <textarea id="form_message" [(ngModel)]="formmessage" name="message" class="form-control" placeholder="Write your message here." rows="4" required="required" data-error="Please, leave us a message."></textarea> </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row" style="padding-left: 75px; max-width: 250px;"> <input type="submit" class="btn btn-success btn-send btn-block " value="Send Message" (click)="onsubmit()"> </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div> <!-- /.8 -->
-                        </div> <!-- /.row-->
-                    </div>
-                </div>
-                 </div>
-            </div>
+            
+            <div class="img1" *ngIf="!value">
+                <img src="./../../../assets/images/suggest1.png">
+            </div> 
     </div>
 </div>

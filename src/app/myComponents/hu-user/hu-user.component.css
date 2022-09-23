@@ -1,7 +1,23 @@
 .con1{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 15px;
-    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
   }
+
+  .card1{
+    background-color: rgba(0, 255, 255, 0.647);
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    margin-left: 60px;
+}
+
+.card{
+  border: none;
+}

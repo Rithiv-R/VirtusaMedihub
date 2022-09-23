@@ -86,3 +86,13 @@ a{
 img{
     opacity: 0.8;
 }
+
+.husign{
+    padding-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 420px;
+}
