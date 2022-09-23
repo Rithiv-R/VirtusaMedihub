@@ -120,8 +120,6 @@ import { DoctorListComponent } from './myComponents/doctor-list/doctor-list.comp
 import { DoctorItemComponent } from './myComponents/doctor-item/doctor-item.component';
 import { DoctorDetailsCardComponent } from './myComponents/doctor-details-card/doctor-details-card.component';
 import { DoctorContactComponent } from './myComponents/doctor-contact/doctor-contact.component';
-import { DiseasesHomeComponent } from './myComponents/diseases-home/diseases-home.component';
-import { DiseasesCardComponent } from './myComponents/diseases-card/diseases-card.component';
 import { ClinicHomeComponent } from './myComponents/clinic-home/clinic-home.component';
 import { ClinicFormComponent } from './myComponents/clinic-form/clinic-form.component';
 import { ClinicCardComponent } from './myComponents/clinic-card/clinic-card.component';
@@ -185,8 +183,6 @@ import { ApplicationStatusComponent } from './myComponents/application-status/ap
     DoctorItemComponent,
     DoctorDetailsCardComponent,
     DoctorContactComponent,
-    DiseasesHomeComponent,
-    DiseasesCardComponent,
     ClinicHomeComponent,
     ClinicFormComponent,
     ClinicCardComponent,
@@ -266,7 +262,6 @@ import { ApplicationStatusComponent } from './myComponents/application-status/ap
     RouterModule.forRoot([
       {path: 'home', component: HomesliderComponent},
       {path: 'faq', component: FaqComponent},
-      {path: 'dieases', component: DiseasesHomeComponent},
       {path: 'hospital', component: HospialListComponent},
       {path: 'doctors/:name', component: DoctorListComponent},
       {path:'status',component:ApplicationStatusComponent},
